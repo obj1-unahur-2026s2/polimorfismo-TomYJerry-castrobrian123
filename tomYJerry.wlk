@@ -1,11 +1,9 @@
 object tom {
     var energiaInicial = 50
-    var energiaActual = 50
+    var energiaActual = 10
     var estaFeliz = energiaActual >= 50
 
     method estaFeliz() = estaFeliz 
-
-
 
     method correr(cantidadDeMetros) {
         energiaActual = energiaActual - cantidadDeMetros / 2
@@ -16,7 +14,7 @@ object tom {
     }
     
     method cazarA_A_DeDistancia(unRaton, unaDistancia) {
-        
+
     }
 
 }
