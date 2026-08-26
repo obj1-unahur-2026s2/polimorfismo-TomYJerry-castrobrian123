@@ -27,8 +27,10 @@ object jerry {
 
     var pesoActual = pesoInicial
 
+    method pesoActual() = pesoActual 
+
     method cambiarPeso(unaEdad) {
-        pesoActual = unaEdad * 20
+        pesoActual = pesoActual + unaEdad * 20
     }
 }
 
