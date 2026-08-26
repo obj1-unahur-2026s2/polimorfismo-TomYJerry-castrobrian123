@@ -1,6 +1,6 @@
 object tom {
     var energiaInicial = 50
-    var energiaActual = 10
+    var energiaActual = 50
     var estaFeliz = energiaActual >= 50
 
     method estaFeliz() = estaFeliz 
@@ -11,10 +11,6 @@ object tom {
 
     method comer(pesoDelRaton) {
         energiaActual = energiaActual + 12 + pesoDelRaton
-    }
-    
-    method cazarA_A_DeDistancia(unRaton, unaDistancia) {
-
     }
 
 }
