@@ -1,17 +1,11 @@
 object tom {
     var energiaInicial = 50
     var energiaActual = 50
-    var estaFeliz = true
+    var estaFeliz = energiaActual >= 50
 
-    //method estaFeliz() = estaFeliz 
+    method estaFeliz() = estaFeliz 
 
-    method estado() {
-        if(energiaActual >= 50) {
-            estaFeliz = true
-        } else {
-            estaFeliz = false
-        }
-    }
+
 
     method correr(cantidadDeMetros) {
         energiaActual = energiaActual - cantidadDeMetros / 2
@@ -22,7 +16,7 @@ object tom {
     }
     
     method cazarA_A_DeDistancia(unRaton, unaDistancia) {
-
+        
     }
 
 }
