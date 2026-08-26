@@ -9,8 +9,8 @@ object tom {
         energiaActual = energiaActual - cantidadDeMetros / 2
     }
 
-    method comer(pesoDelRaton) {
-        energiaActual = energiaActual + 12 + pesoDelRaton
+    method comer(unRaton) {
+        energiaActual = energiaActual + 12 + unRaton.peso()
     }
 
     method velocidadMaxima(unaEnergia) = 5 + unaEnergia / 10
