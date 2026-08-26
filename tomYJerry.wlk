@@ -13,14 +13,28 @@ object tom {
         energiaActual = energiaActual + 12 + pesoDelRaton
     }
     
+
 }
 
 object jerry {
+    var edadInicial = 2
 
+    method consultarEdadDeInicio() = edadInicial
+
+    var pesoInicial = edadInicial * 20
+
+    method peso() = pesoInicial
+
+    var pesoActual = pesoInicial
+
+    method cambiarPeso(unaEdad) {
+        pesoActual = unaEdad * 20
+    }
 }
 
 object nibbles {
-
+    const peso = 35
+    method peso() = peso 
 }
 
 object perez {
