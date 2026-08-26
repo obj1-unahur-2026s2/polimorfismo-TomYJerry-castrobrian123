@@ -13,6 +13,8 @@ object tom {
         energiaActual = energiaActual + 12 + pesoDelRaton
     }
 
+    method velocidadMaxima(unaEnergia) = 5 + unaEnergia / 10
+
 }
 
 object jerry {
