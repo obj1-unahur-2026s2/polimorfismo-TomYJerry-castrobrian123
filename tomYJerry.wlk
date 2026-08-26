@@ -1,19 +1,19 @@
 object tom {
-    var energiaInicial = 50
+    //var energiaInicial = 50
     var energiaActual = 50
     var estaFeliz = energiaActual >= 50
 
     method estaFeliz() = estaFeliz 
 
     method correr(cantidadDeMetros) {
-        energiaActual = energiaActual - cantidadDeMetros / 2
+        energiaActual = energiaActual - (cantidadDeMetros / 2)
     }
 
     method comer(unRaton) {
         energiaActual = energiaActual + 12 + unRaton.peso()
     }
 
-    method velocidadMaxima() = 5 + energiaActual / 10
+    method velocidadMaxima() = 5 + (energiaActual / 10)
 
 }
 
@@ -43,3 +43,10 @@ object nibbles {
 object perez {
 
 }
+
+// para usar algo()
+// se debe agregar el self.algo()
+
+// energia = 0.max(energia - distancia/2)
+
+// energia = (energia - distancia/2).max(0)
