@@ -3,7 +3,15 @@ object tom {
     var energiaActual = 50
     var estaFeliz = true
 
-    method estaFeliz() = estaFeliz
+    //method estaFeliz() = estaFeliz 
+
+    method estado() {
+        if(energiaActual >= 50) {
+            estaFeliz = true
+        } else {
+            estaFeliz = false
+        }
+    }
 
     method correr(cantidadDeMetros) {
         energiaActual = energiaActual - cantidadDeMetros / 2
@@ -13,6 +21,9 @@ object tom {
         energiaActual = energiaActual + 12 + pesoDelRaton
     }
     
+    method cazarA_A_DeDistancia(unRaton, unaDistancia) {
+
+    }
 
 }
 
@@ -23,7 +34,7 @@ object jerry {
 
     var pesoInicial = edadInicial * 20
 
-    method peso() = pesoInicial
+    method pesoInicial() = pesoInicial
 
     var pesoActual = pesoInicial
 
