@@ -1,0 +1,26 @@
+import tomYJerry.*
+
+describe "Tests de Tom y los ratones" {
+
+    test "Velocidad inicial de Tom" {
+        assert.equals(10, tom.velocidadMaxima())
+        assert.equals(50, tom.energia())
+        assert.that(tom.estaFeliz())
+    }
+
+    test "Tom come a Jerry" {
+        tom.comer(jerry)
+        assert.equals(15.2, tom.velocidadMaxima())
+        assert.equals(102, tom.energia())
+        assert.that(tom.estaFeliz())
+    }
+
+    test "Tom puede cazar a Jerry a 20 metros" {
+        assert.that(tom.puedeCazar(jerry, 20))
+    }
+
+    test "Tom caza a Nibbles a 10 metros" {
+        tom.cazar(nibbles, 10)
+        assert.that(tom.energia() > 0)
+    }
+}

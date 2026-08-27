@@ -1,47 +1,54 @@
 object tom {
-    //var energiaInicial = 50
+    
     var energiaActual = 50
-    var estaFeliz = energiaActual >= 50
 
-    method estaFeliz() = estaFeliz 
+    method energia() = energiaActual 
+
+    method estaFeliz() = energiaActual >= 50
+
+    method velocidadMaxima() = 5 + (energiaActual / 10)
+
+    method comer(unRaton) {
+        energiaActual = energiaActual + (12 + unRaton.peso())
+    } 
 
     method correr(cantidadDeMetros) {
         energiaActual = energiaActual - (cantidadDeMetros / 2)
     }
 
-    method comer(unRaton) {
-        energiaActual = energiaActual + 12 + unRaton.peso()
-    }
+    method puedeCazar(unRaton, distancia) = energiaActual > distancia / 2
 
-    method velocidadMaxima() = 5 + (energiaActual / 10)
+    method cazar(unRaton, distancia) {
+        if (self.puedeCazar(unRaton, distancia)) {
+            self.correr(distancia)
+            self.comer(unRaton)
+        }
+    }
 
 }
 
 object jerry {
-    var edadInicial = 2
 
-    method consultarEdadDeInicio() = edadInicial
+    var edad = 2
 
-    var pesoInicial = edadInicial * 20
+    method edad() = edad
 
-    method pesoInicial() = pesoInicial
+    method peso() = edad * 20
 
-    var pesoActual = pesoInicial
-
-    method pesoActual() = pesoActual 
-
-    method cambiarPeso(unaEdad) {
-        pesoActual = pesoActual + unaEdad * 20
+    method cumplirAnios() {
+        edad = edad + 1
     }
+
 }
 
 object nibbles {
-    const peso = 35
+    var peso = 35
     method peso() = peso 
 }
 
 object perez {
-
+    var energia = 40
+    method peso() = energia / 2
 }
 
 // para usar algo()
